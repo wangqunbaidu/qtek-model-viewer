@@ -11384,6 +11384,8 @@ module.exports = {
 
         load: function (src) {
             var image = new Image();
+            // CORS enabled image
+            image.crossOrigin = "Anonymous";
             var self = this;
             image.onload = function() {
                 self.dirty();
@@ -11642,6 +11644,8 @@ module.exports = {
             var self = this;
             util.each(imageList, function (src, target){
                 var image = new Image();
+                // CORS enabled image)
+                image.crossOrigin = "Anonymous";
                 image.onload = function () {
                     loading --;
                     if (loading === 0){
